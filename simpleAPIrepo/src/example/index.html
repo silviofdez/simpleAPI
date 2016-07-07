@@ -1,0 +1,69 @@
+<!doctype html>  
+<html lang="en" ng-app="simpleAPI">  
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple API app</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>  
+<body ng-controller="mainController">  
+    <div class="container"> 
+        <div class="jumbotron text-center">
+            <h1>Simple API app</h1>
+        </div>
+        <!--Validation dataset-->
+        <div id="clinicaldatavalidation-list" class="row">
+		<h2>Validation Clinical DataSet</h2>
+            <div class="col-sm-4 col-sm-offset-4">
+					<label>
+                        Sample 
+                    </label>
+					<label>
+                        Condition 
+                    </label>
+					<label>
+                        Age
+                    </label>
+					<label>
+                        Gender
+                    </label>
+					<label>
+                        Race
+                    </label>
+                 <div class="checkbox" ng-repeat="clinicalvalidationdata in clinicalvalidationdataset">
+                    <label>
+                        {{ clinicalvalidationdata.sample }} 
+                    </label>
+					<label>
+                        {{ clinicalvalidationdata.condition }} 
+                    </label>
+					<label>
+                        {{ clinicalvalidationdata.age }} 
+                    </label>
+					<label>
+                        {{ clinicalvalidationdata.gender }} 
+                    </label>
+					<label>
+                        {{ clinicalvalidationdata.race }} 
+                    </label>
+                 </div>
+             </div>
+			 
+             </div>
+         </div>
+         <!--Formulario para insertar nuevos Todo            <div id="todo-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Inserta una tarea nueva" ng-model="formData.text">
+                    </div>
+                    <button class="btn btn-primary btn-lg" ng-click="createTodo()">Añadir</button>
+                </form>
+            </div>--> 
+        </div>
+    </div>
+    <script src="jquery.min.js"></script> 
+	<script src="angular.min.js"></script>
+	<script src="main.js"></script>
+</body>  
+</html>  
